@@ -7,20 +7,21 @@ import 'package:flutter/material.dart'
         Container,
         ValueListenableBuilder;
 
-/// This widget can listen to multiple [ValueListenable]s and
-/// call given builder if any one of them changes.
+/// This widget listens to multiple [ValueListenable]s and
+/// calls given builder function if any one of them changes.
 class MultiValueListenableBuider extends StatelessWidget {
-  /// List of [ValueListenable]s.
+  /// List of [ValueListenable]s to listen to.
   final List<ValueListenable> valueListenables;
 
   /// The builder function to be called when value of any of the [ValueListenable] changes.
-  /// The order of values in [values] list will be same as [valueListenables].
+  /// The order of values list will be same as [valueListenables] list.
   final Widget Function(
       BuildContext context, List<dynamic> values, Widget? child) builder;
 
   /// An optional child widget which will be avaliable as child parameter in [builder].
   final Widget? child;
 
+  // The const constructor.
   const MultiValueListenableBuider({
     Key? key,
     required this.valueListenables,

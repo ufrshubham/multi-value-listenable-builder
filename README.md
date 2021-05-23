@@ -1,14 +1,53 @@
-# multi_value_listenable_builder
+# MultiValueListenableBuilder
 
-A new Flutter package project.
+A widget to listen to multiple [ValueListenable](https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html)s in Flutter.
+
+## Usage
+
+- Add the multi_value_listenable_builder as a dependency in your project.
+
+- Import `package:multi_value_listenable_builder/multi_value_listenable_builder.dart` in required files.
+
+- Use `MultiValueListenableBuilder` just like any other widget.
+
+```dart
+import 'package:multi_value_listenable_builder/multi_value_listenable_builder.dart';
+
+MultiValueListenableBuider(
+    // Add all ValueListenables here.
+    valueListenables: [
+        listenable0,
+        listenable1,
+        listenable2,
+        .
+        .
+        listenableN
+    ],
+    builder: (context, values, child) {
+        // Get the updated value of each listenable
+        // in values list.
+        return YourWidget(
+            values.elementAt(0),
+            values.elementAt(1),
+            values.elementAt(2),
+            .
+            .
+            values.elementAt(N),
+            child: child // Optional child.
+        );
+    },
+    child: YourOptionalChildWidget(),
+)
+```
+
+A detailed and working example can be found [here](https://github.com/ufrshubham/multi-value-listenable-builder/example/).
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Learn more about Dart, Flutter and working with packages here.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- [Dart](https://dart.dev/)
+
+- [Fluter](https://flutter.dev/)
+
+- [Developing packages & plugins](https://flutter.dev/docs/development/packages-and-plugins/developing-packages)
