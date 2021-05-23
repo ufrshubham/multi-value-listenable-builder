@@ -2,6 +2,8 @@
 
 A widget to listen to multiple [ValueListenable](https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html)s in Flutter.
 
+![pub](https://img.shields.io/pub/v/multi_value_listenable_builder?logo=multivaluelistenablebuilder)
+
 ## Usage
 
 - Add the multi_value_listenable_builder as a dependency in your project.
