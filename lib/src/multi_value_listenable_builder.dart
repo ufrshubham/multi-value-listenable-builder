@@ -30,8 +30,7 @@ class MultiValueListenableBuider extends StatelessWidget {
     return AnimatedBuilder(
       animation: Listenable.merge(valueListenables),
       builder: (context, child) {
-        final list =
-            valueListenables.map((listenable) => listenable.value).toList();
+        final list = valueListenables.map((listenable) => listenable.value);
         return builder(context, List<dynamic>.unmodifiable(list), child);
       },
       child: child,
