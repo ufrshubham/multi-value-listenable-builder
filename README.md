@@ -44,12 +44,3 @@ MultiValueListenableBuilder(
 
 A detailed and working example can be found [here](https://github.com/ufrshubham/multi-value-listenable-builder/example/).
 
-## Getting Started
-
-Learn more about Dart, Flutter and working with packages here.
-
-- [Dart](https://dart.dev/)
-
-- [Fluter](https://flutter.dev/)
-
-- [Developing packages & plugins](https://flutter.dev/docs/development/packages-and-plugins/developing-packages)
