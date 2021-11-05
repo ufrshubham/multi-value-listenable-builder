@@ -4,7 +4,6 @@ import 'package:flutter/material.dart'
         StatelessWidget,
         Widget,
         BuildContext,
-        Container,
         ValueListenableBuilder;
 
 /// This widget listens to multiple [ValueListenable]s and
