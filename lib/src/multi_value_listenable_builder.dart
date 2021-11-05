@@ -41,9 +41,8 @@ class MultiValueListenableBuider extends StatelessWidget {
         list[index] = value;
         if (index < valueListenables.length - 1) {
           return _buildValueListenableBuilders(index + 1, list);
-        } else {
-          return builder.call(context, List<dynamic>.unmodifiable(list), child);
         }
+        return builder(context, List<dynamic>.unmodifiable(list), child);
       },
       child: child,
     );
