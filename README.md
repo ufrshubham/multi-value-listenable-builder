@@ -15,7 +15,7 @@ A widget to listen to multiple [ValueListenable](https://api.flutter.dev/flutter
 ```dart
 import 'package:multi_value_listenable_builder/multi_value_listenable_builder.dart';
 
-MultiValueListenableBuider(
+MultiValueListenableBuilder(
     // Add all ValueListenables here.
     valueListenables: [
         listenable0,
