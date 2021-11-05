@@ -1,6 +1,6 @@
 name: multi_value_listenable_builder
 description: A Flutter package which allows to listening to multiple ValueListenables using a single widget.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ufrshubham/multi-value-listenable-builder
 
 environment:

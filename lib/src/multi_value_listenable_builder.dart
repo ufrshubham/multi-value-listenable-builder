@@ -33,9 +33,7 @@ class MultiValueListenableBuider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final list = List<dynamic>.filled(valueListenables.length, dynamic);
-    return Container(
-      child: _buildValueListenableBuilders(0, list),
-    );
+    return _buildValueListenableBuilders(0, list);
   }
 
   ValueListenableBuilder _buildValueListenableBuilders(
