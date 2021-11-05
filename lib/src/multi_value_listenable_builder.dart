@@ -1,11 +1,6 @@
 import 'package:flutter/foundation.dart' show Key, ValueListenable;
 import 'package:flutter/material.dart'
-    show
-        StatelessWidget,
-        Widget,
-        BuildContext,
-        Container,
-        ValueListenableBuilder;
+    show StatelessWidget, Widget, BuildContext, ValueListenableBuilder;
 
 /// This widget listens to multiple [ValueListenable]s and
 /// calls given builder function if any one of them changes.
@@ -40,24 +35,16 @@ class MultiValueListenableBuider extends StatelessWidget {
     int index,
     List<dynamic> list,
   ) {
-    if (index < valueListenables.length - 1) {
-      return ValueListenableBuilder(
-        valueListenable: valueListenables.elementAt(index),
-        builder: (context, value, child) {
-          list[index] = value;
+    return ValueListenableBuilder(
+      valueListenable: valueListenables.elementAt(index),
+      builder: (context, value, child) {
+        list[index] = value;
+        if (index < valueListenables.length - 1) {
           return _buildValueListenableBuilders(index + 1, list);
-        },
-        child: child,
-      );
-    } else {
-      return ValueListenableBuilder(
-        valueListenable: valueListenables.elementAt(index),
-        builder: (context, value, child) {
-          list[index] = value;
-          return builder.call(context, List<dynamic>.unmodifiable(list), child);
-        },
-        child: child,
-      );
-    }
+        }
+        return builder(context, List<dynamic>.unmodifiable(list), child);
+      },
+      child: child,
+    );
   }
 }
