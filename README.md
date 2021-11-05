@@ -42,5 +42,5 @@ MultiValueListenableBuilder(
 )
 ```
 
-A detailed and working example can be found [here](https://github.com/ufrshubham/multi-value-listenable-builder/example/).
+A detailed and working example can be found [here](https://github.com/ufrshubham/multi-value-listenable-builder/tree/main/example/).
 
