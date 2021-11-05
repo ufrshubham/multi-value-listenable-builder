@@ -4,7 +4,7 @@ import 'package:flutter/material.dart'
 
 /// This widget listens to multiple [ValueListenable]s and
 /// calls given builder function if any one of them changes.
-class MultiValueListenableBuider extends StatelessWidget {
+class MultiValueListenableBuilder extends StatelessWidget {
   /// List of [ValueListenable]s to listen to.
   final List<ValueListenable> valueListenables;
 
@@ -17,7 +17,7 @@ class MultiValueListenableBuider extends StatelessWidget {
   final Widget? child;
 
   // The const constructor.
-  const MultiValueListenableBuider({
+  const MultiValueListenableBuilder({
     Key? key,
     required this.valueListenables,
     required this.builder,

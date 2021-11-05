@@ -41,7 +41,7 @@ class _DemoState extends State<Demo> {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 50.0),
-              child: MultiValueListenableBuider(
+              child: MultiValueListenableBuilder(
                 valueListenables: _argb,
                 builder: (context, values, child) {
                   return Container(
